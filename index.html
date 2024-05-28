@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Employés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestion des Employés</h1>
+    <table id="employee-table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Téléphone</th>
+                <th>Département</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div class="pagination">
+        <a href="#" class="precedent">Précédent</a>
+        <span>1</span>
+        <a href="#" class="suivant">Suivant</a>
+    </div>
+    
+    <form id="employee-form" action="#" method="post">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom">
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" name="prenom">
+        <label for="telephone">Téléphone:</label>
+        <input type="text" id="telephone" name="telephone">
+        <label for="departement">Département:</label>
+        <select id="departement" name="departement">
+            <option value="informatique">Informatique</option>
+            <option value="finance">Finance</option>
+            <option value="commercial">Commercial</option>
+        </select>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <!-- Modal de confirmation de suppression -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Êtes-vous sûr de vouloir supprimer cet employé?</p>
+            <button id="confirm-delete">Oui</button>
+            <button class="close-modal">Non</button>
+        </div>
+    </div>
+
+    <!-- Edit Modal Structure -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="editForm">
+            <input type="hidden" id="edit-id">
+            <label for="edit-nom">Nom:</label>
+            <input type="text" id="edit-nom" name="nom" required>
+            <label for="edit-prenom">Prenom:</label>
+            <input type="text" id="edit-prenom" name="prenom" required>
+            <label for="edit-telephone">Telephone:</label>
+            <input type="text" id="edit-telephone" name="telephone" required>
+            <label for="edit-departement">Departement:</label>
+            <input type="text" id="edit-departement" name="departement" required>
+            <button type="submit">Enregistrer</button>
+        </form>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

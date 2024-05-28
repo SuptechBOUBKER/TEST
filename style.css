@@ -1,0 +1,131 @@
+body {
+    font-family: sans-serif;
+    margin: 10px; /* Ajout de marges autour de la page */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 6px; /* Réduction du rembourrage */
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 10px; /* Réduction de la marge supérieure */
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 3px 8px; /* Réduction du rembourrage */
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #ccc;
+}
+
+form {
+    margin-top: 10px; /* Réduction de la marge supérieure */
+}
+
+label {
+    display: block;
+    margin-bottom: 3px; /* Réduction de la marge inférieure */
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 18px); /* Ajustement de la largeur pour compenser la bordure */
+    padding: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px; /* Réduction de la marge inférieure */
+}
+
+button {
+    padding: 6px 12px; /* Réduction du rembourrage */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px; /* Réduction de la marge supérieure */
+}
+
+.modal {
+    display: none; /* Cacher le modal par défaut */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.edit {
+    color: blue;
+    background: none;
+    border: 1px solid blue; /* Ajout de la bordure */
+    border-radius: 5px; /* Arrondir les coins */
+    padding: 2px 18px; /* Ajouter un espacement interne */
+    cursor: pointer;
+    font-size: 1em;
+    position: relative; /* Positionnement relatif pour positionner l'icône */
+    margin-right: 10px; /* Ajouter un espacement entre les boutons */
+}
+
+.edit::before {
+    content: "\270E"; /* Caractère de l'icône crayon */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-280%, -50%); /* Centrer l'icône */
+}
+
+.delete {
+    color: red;
+    background: none;
+    border: 1px solid red; /* Ajout de la bordure */
+    border-radius: 5px; /* Arrondir les coins */
+    padding: 2px 10px; /* Ajouter un espacement interne */
+    cursor: pointer;
+    font-size: 1em;
+    position: relative; /* Positionnement relatif pour positionner l'icône de croix */
+}
+
+.delete::before {
+    content: "\00D7"; /* Caractère de la croix */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-510%, -50%); /* Centrer l'icône */
+}
